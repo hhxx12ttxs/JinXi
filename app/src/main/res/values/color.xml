@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="default_white">#fff</color>
+    <color name="divider">#d2d2d2</color>
+    <color name="default_green">#5dc990</color>
+    <color name="default_pink">#ff62a4</color>
+    <color name="dark_black">#333</color>
+    <color name="default_black">#666</color>
+    <color name="bg_gray">#f4f4f4</color>
+    <color name="bg_blue">#1BBC9B</color>
+    <color name="btn_gray_n">#f4f4f4</color>
+    <color name="btn_gray_h">#c4c4c4</color>
+    <color name="dialog_bg">#5f000000</color>
+    <color name="default_red">#fea1c4</color>
+    <color name="text_gray">#999</color>
+</resources>

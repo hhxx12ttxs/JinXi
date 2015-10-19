@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/header" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header">
+
+        <LinearLayout
+            android:id="@+id/root_inner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:orientation="vertical"
+            android:paddingBottom="20dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <cn.jinxi.view.RoundRelativeLayout
+                    android:id="@+id/firstlogin_portrait_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="20dp"
+                    custom:borderColor="@color/bg_gray"
+                    custom:borderWidth="1px"
+                    custom:radius="40dp">
+
+                    <ImageView
+                        android:id="@+id/firstlogin_portrait"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/img_head_set" />
+                </cn.jinxi.view.RoundRelativeLayout>
+
+                <ImageView
+                    android:layout_width="37dp"
+                    android:layout_height="37dp"
+                    android:layout_alignBottom="@id/firstlogin_portrait_container"
+                    android:layout_alignRight="@id/firstlogin_portrait_container"
+                    android:layout_marginBottom="-15dp"
+                    android:layout_marginRight="-15dp"
+                    android:background="@drawable/icon_photo" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/firstlogin_portrait_container"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp">
+
+                    <Button
+                        android:id="@+id/firstlogin_sex_male"
+                        android:layout_width="70dp"
+                        android:layout_height="33dp"
+                        android:background="@drawable/btn_male"
+                        android:text="男" />
+
+                    <Button
+                        android:id="@+id/firstlogin_sex_female"
+                        android:layout_width="70dp"
+                        android:layout_height="33dp"
+                        android:layout_marginLeft="40dp"
+                        android:background="@drawable/btn_female"
+                        android:text="女" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginTop="20dp"
+                android:background="@color/divider" />
+
+            <include
+                android:id="@+id/firstlogin_name"
+                layout="@layout/item_setting" />
+
+            <include
+                android:id="@+id/firstlogin_alias"
+                layout="@layout/item_setting" />
+
+            <include
+                android:id="@+id/firstlogin_birthday"
+                layout="@layout/item_setting" />
+
+            <Button
+                android:id="@+id/firstlogin_confirm"
+                style="@style/btn_green"
+                android:layout_width="300dp"
+                android:layout_height="44dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:text="确认" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

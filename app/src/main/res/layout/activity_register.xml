@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/header" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header">
+
+        <RelativeLayout
+            android:id="@+id/root_inner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:paddingBottom="20dp">
+            <EditText
+                android:id="@+id/register_school"
+                style="@style/edittext_singleline"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:drawableLeft="@drawable/icon_email"
+                android:ems="11"
+                android:hint="学校" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_alignTop="@+id/register_school"
+                android:layout_marginLeft="10dp"
+                android:background="@color/divider" />
+
+            <EditText
+                android:id="@+id/register_email"
+                style="@style/edittext_singleline"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/register_school"
+                android:drawableLeft="@drawable/icon_email"
+                android:ems="11"
+                android:hint="邮箱"
+                android:inputType="textEmailAddress" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_alignTop="@+id/register_email"
+                android:layout_marginLeft="10dp"
+                android:background="@color/divider" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_alignBottom="@+id/register_email"
+                android:background="@color/divider" />
+
+            <EditText
+                android:id="@+id/register_password"
+                style="@style/edittext_singleline"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_below="@+id/register_email"
+                android:layout_centerHorizontal="true"
+                android:drawableLeft="@drawable/icon_pwd"
+                android:ems="10"
+                android:hint="密码支持6-20位数字字母和符号"
+                android:inputType="textPassword" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_alignTop="@+id/register_password"
+                android:layout_marginLeft="10dp"
+                android:background="@color/divider" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_alignBottom="@+id/register_password"
+                android:background="@color/divider" />
+
+            <EditText
+                android:id="@+id/register_confirm_password"
+                style="@style/edittext_singleline"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_below="@+id/register_password"
+                android:layout_centerHorizontal="true"
+                android:drawableLeft="@drawable/icon_pwd"
+                android:ems="10"
+                android:hint="密码支持6-20位数字字母和符号"
+                android:inputType="textPassword" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_alignTop="@+id/register_confirm_password"
+                android:layout_marginLeft="10dp"
+                android:background="@color/divider" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_alignBottom="@+id/register_confirm_password"
+                android:background="@color/divider" />
+
+
+            <Button
+                android:id="@+id/register_registerbtn"
+                style="@style/btn_green"
+                android:layout_width="300dp"
+                android:layout_height="44dp"
+                android:layout_below="@+id/register_confirm_password"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:text="注册" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
+
