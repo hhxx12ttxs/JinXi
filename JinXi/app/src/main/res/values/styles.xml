@@ -1,0 +1,21 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="edittext_singleline">
+        <item name="android:background">@color/default_white</item>
+        <item name="android:textCursorDrawable">@null</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/dark_black</item>
+        <item name="android:padding">10dp</item>
+    </style>
+
+    <style name="btn_green">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/default_white</item>
+        <item name="android:background">@drawable/btn_login</item>
+    </style>
+</resources>
