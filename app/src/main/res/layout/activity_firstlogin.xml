@@ -20,6 +20,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:clickable="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:orientation="vertical"
             android:paddingBottom="20dp">
 
@@ -78,10 +80,15 @@
                 </LinearLayout>
             </RelativeLayout>
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:gravity="bottom"
+                android:text="基本信息" />
+
             <View
                 android:layout_width="match_parent"
-                android:layout_height="1px"
-                android:layout_marginTop="20dp"
+                android:layout_height="3px"
                 android:background="@color/divider" />
 
             <include
@@ -89,12 +96,59 @@
                 layout="@layout/item_setting" />
 
             <include
-                android:id="@+id/firstlogin_alias"
+                android:id="@+id/firstlogin_signature"
+                layout="@layout/item_setting" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:gravity="bottom"
+                android:hint="学校信息" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3px"
+                android:background="@color/divider" />
+
+            <include
+                android:id="@+id/firstlogin_school"
                 layout="@layout/item_setting" />
 
             <include
-                android:id="@+id/firstlogin_birthday"
+                android:id="@+id/firstlogin_degree"
                 layout="@layout/item_setting" />
+
+            <include
+                android:id="@+id/firstlogin_grade"
+                layout="@layout/item_setting" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:gravity="bottom"
+                android:text="联系方式" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3px"
+                android:background="@color/divider" />
+
+            <include
+                android:id="@+id/firstlogin_email"
+                layout="@layout/item_setting" />
+
+            <include
+                android:id="@+id/firstlogin_qq"
+                layout="@layout/item_setting" />
+
+            <include
+                android:id="@+id/firstlogin_wechat"
+                layout="@layout/item_setting" />
+
+            <include
+                android:id="@+id/firstlogin_phone"
+                layout="@layout/item_setting" />
+
 
             <Button
                 android:id="@+id/firstlogin_confirm"

@@ -32,7 +32,8 @@ public class MainActivity extends BaseActivity {
             @Override
             public void run() {
                 //to do judge login or first open
-                LoginActivity.Start(MainActivity.this);
+                //LoginActivity.Start(MainActivity.this);
+                FirstLoginActivity.Start(MainActivity.this);
                 finish();
             }
         }, 2000);

@@ -82,6 +82,7 @@ public class ImageManager {
     }
 
     public String getPortraitPath() {
+        String path = "img_portrait.jpg";
         return GlobalSettingManager.GetCachePath() + "img_portrait.jpg";
     }
 

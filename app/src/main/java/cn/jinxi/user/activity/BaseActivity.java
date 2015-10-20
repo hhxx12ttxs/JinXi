@@ -2,6 +2,7 @@ package cn.jinxi.user.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.ImageButton;
@@ -9,6 +10,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import cn.jinxi.R;
+import cn.jinxi.user.manager.EventManager;
+import cn.jinxi.user.manager.ImageManager;
 import cn.jinxi.user.manager.NetworkManager;
 
 /**
@@ -21,6 +24,13 @@ public class BaseActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         networkManager = new NetworkManager(this);
+
+        ImageManager.GetInstance(getApplicationContext());
+        EventManager.GetInstance().getEventBus().register(this);
+    }
+
+    public void onEvent(String event) {
+        Log.d("Event", "default handler");
     }
 
     public NetworkManager getNetworkManager(){
@@ -64,5 +74,11 @@ public class BaseActivity extends Activity {
         TextView right = (TextView) findViewById(R.id.header_righttextbtn);
         right.setVisibility(View.VISIBLE);
         return right;
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        EventManager.GetInstance().getEventBus().unregister(this);
     }
 }
