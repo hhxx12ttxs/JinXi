@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.os.Handler;
 
 import cn.jinxi.R;
+import cn.jinxi.user.fragment.NavigationDrawerFragment;
 
 /**
  * Created by jiewang on 2015/10/18.
@@ -32,8 +33,8 @@ public class MainActivity extends BaseActivity {
             @Override
             public void run() {
                 //to do judge login or first open
-                //LoginActivity.Start(MainActivity.this);
-                FirstLoginActivity.Start(MainActivity.this);
+                //FirstLoginActivity.Start(MainActivity.this);
+                HomePageActivity.Start(MainActivity.this);
                 finish();
             }
         }, 2000);
